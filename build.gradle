@@ -217,7 +217,7 @@ task checkSigningRequirements << {
         throw new IllegalStateException("missing required properties for " +
             "upload");
 }
-
+/*
 task jacocoRootReport(type: JacocoReport, group: 'Coverage reports') {
     description = 'Generates an aggregate report from all subprojects'
     configure(subprojects - project(':ui:linuxLauncher')) {
@@ -238,7 +238,7 @@ task jacocoRootReport(type: JacocoReport, group: 'Coverage reports') {
         }
     }
 }
-
+*/
 
 
 uploadArchives {
