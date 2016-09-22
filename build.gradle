@@ -186,7 +186,30 @@ jacoco {
 toolVersion = "0.7.5.201505241946"
 }
  
-
+task jacocoTestReport(type:JacocoReport,dependsOn:"test"){  
+    group = "Reporting"  
+    description = "Generate Jacoco coverage reports after running tests."  
+    reports{  
+        xml.enabled true  
+        html.enabled true  
+        csv.enabled false  
+    }  
+    classDirectories = fileTree(  
+            dir : "$buildDir/intermediates/classes/debug",  
+            excludes : [  
+                    '**/*Test.class',  
+                    '**/R.class',  
+                    '**/R$*.class',  
+                    '**/BuildConfig.*',  
+                    '**/Manifest*.*'  
+            ]  
+    )  
+    def coverageSourceDirs = ['src']  
+    additionalSourceDirs = files(coverageSourceDirs)  
+    sourceDirectories = files(coverageSourceDirs)  
+    additionalClassDirs = files(coverageSourceDirs)  
+    executionData = files("$buildDir/outputs/test-code-coverage/coverage.ec")  
+}  
 
 
 project.ext {
