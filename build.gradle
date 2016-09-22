@@ -186,13 +186,6 @@ jacoco {
 toolVersion = "0.7.5.201505241946"
 }
  
-jacocoTestReport {
-  reports {
-   xml.enabled = true
-   html.enabled = true
-  
-  }
-}
 
 
 
@@ -221,14 +214,24 @@ task checkSigningRequirements << {
 
 
 jacocoTestReport {
-    group = "Reporting"
     reports {
-        xml.enabled true
-        csv.enabled false
-        html.destination "${buildDir}/reports/coverage"
+        xml {
+            enabled true // coveralls plugin depends on xml format report
+        }
+
+        html {
+            enabled true
+        }
+    }
+
+    test {
+        jacoco {
+            destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+            classDumpFile = file("$buildDir/jacoco/classpathdumps")
+            
+        }
     }
 }
-
 
 
 uploadArchives {
