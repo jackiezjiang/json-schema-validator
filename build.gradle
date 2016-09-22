@@ -217,28 +217,18 @@ task checkSigningRequirements << {
         throw new IllegalStateException("missing required properties for " +
             "upload");
 }
-/*
-task jacocoRootReport(type: JacocoReport, group: 'Coverage reports') {
-    description = 'Generates an aggregate report from all subprojects'
-    configure(subprojects - project(':ui:linuxLauncher')) {
-        dependsOn(test)
 
-        additionalSourceDirs = files(sourceSets.main.allSource.srcDirs)
-        sourceDirectories = files(sourceSets.main.allSource.srcDirs)
-        classDirectories = files(sourceSets.main.output)
-        executionData = files(jacocoTestReport.executionData)
 
-        reports {
-            html.enabled = true
-            xml.enabled = true
-        }
 
-        doFirst {
-            executionData = files(executionData.findAll { it.exists() })
-        }
+jacocoTestReport {
+    group = "Reporting"
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination "${buildDir}/reports/coverage"
     }
 }
-*/
+
 
 
 uploadArchives {
