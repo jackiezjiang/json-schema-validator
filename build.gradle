@@ -194,6 +194,7 @@ task jacocoTestCoverageReport(type:JacocoReport,dependsOn:"test"){
         html.enabled true  
         csv.enabled false  
     }  
+    /*
     classDirectories = fileTree(  
             dir : "$buildDir/intermediates/classes/debug",  
             excludes : [  
@@ -203,7 +204,7 @@ task jacocoTestCoverageReport(type:JacocoReport,dependsOn:"test"){
                     '**/BuildConfig.*',  
                     '**/Manifest*.*'  
             ]  
-    )  
+    )  */
     def coverageSourceDirs = ['src']  
     additionalSourceDirs = files(coverageSourceDirs)  
     sourceDirectories = files(coverageSourceDirs)  
