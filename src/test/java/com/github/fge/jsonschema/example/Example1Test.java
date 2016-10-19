@@ -6,7 +6,7 @@ public  class Example1Test
 
 {
 
-     public void call(){
+     public void call() throws IOException, ProcessingException {
        Example1.main(null);
     }
     
