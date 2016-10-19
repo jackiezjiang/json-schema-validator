@@ -27,7 +27,7 @@ public final class URITemplateFormatAttributeTest
     public URITemplateFormatAttributeTest()
         throws IOException
     {
-        super("uri-template");
+        super("mac");
     }
 }
 
