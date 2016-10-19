@@ -7,7 +7,8 @@ public final class Example1Test
 {
 
     public void call() throws IOException, ProcessingException {
-        Example1.main(null);
+        String[] args = {};
+        Example1.main(args);
     }
 
 
