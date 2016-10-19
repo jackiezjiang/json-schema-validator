@@ -9,6 +9,6 @@ public final class JsonPointerFormatAttributeTest
     public JsonPointerFormatAttributeTest()
         throws IOException
     {
-        super("json-pointer");
+        super("mac");
     }
 }
