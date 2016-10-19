@@ -6,8 +6,7 @@ public final class Example1Test
 
 {
 
-    public void call() throws IOException, ProcessingException {
-        String[] args = {};
+    public static void main(String[] args){
         Example1.main(args);
     }
 
