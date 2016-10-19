@@ -1,5 +1,5 @@
 
-package com.github.fge.jsonschema.example;
+package com.github.fge.jsonschema.examples;
 
 public final class Example1Test
 
