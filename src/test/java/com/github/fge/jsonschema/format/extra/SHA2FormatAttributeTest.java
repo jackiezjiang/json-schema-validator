@@ -27,6 +27,6 @@ public final class SHA2FormatAttributeTest
     public SHA2FormatAttributeTest()
         throws IOException
     {
-       // super("sha512");
+        super("json-pointer");
     }
 }
