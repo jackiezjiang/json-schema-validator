@@ -8,7 +8,9 @@ public  class Example1Test
 
  public static void main(String[] args)
         throws IOException, ProcessingException {
-            Example1.main(new String[0]);
+         Method method = Example1.class.getMethod("main",  String[].class); 
+         method.invoke(null, new Object[]{new String[]{}});
+           
         }
 }
 
