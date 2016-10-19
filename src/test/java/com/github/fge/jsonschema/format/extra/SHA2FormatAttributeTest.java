@@ -27,6 +27,6 @@ public final class SHA2FormatAttributeTest
     public SHA2FormatAttributeTest()
         throws IOException
     {
-        super("sha1");
+        super("sha512");
     }
 }
