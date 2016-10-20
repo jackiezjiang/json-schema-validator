@@ -11,7 +11,10 @@ public  class Example1Test
  public static void main(String[] args)
         throws IOException, ProcessingException {
         // Example1.class.getMethod("main",  String[].class).invoke(null, new Object[]{new String[]{}});
-     Example1.main(null);
+         Example1.main(new String[]);
+         Example2.main(new String[]);
+         Example3.main(new String[]);
+         Example4.main(new String[]);
         }
 }
 
