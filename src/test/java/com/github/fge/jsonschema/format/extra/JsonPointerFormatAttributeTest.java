@@ -10,7 +10,7 @@ public final class JsonPointerFormatAttributeTest extends ExtraFormatAttributeTe
     public JsonPointerFormatAttributeTest()
         throws IOException
         {
-            super("json-pointer");
+            super("sha1");
         }
 
 }
